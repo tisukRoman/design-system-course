@@ -73,5 +73,17 @@ SPACING
 
 1) .flow > * + * { margin-top: var(--flow-space, 1rem); }  every child except the first one will be with margin-top: 1rem;  (useful utility)
 
-2) 
 
+INTERACTIVE ELEMENTS
+
+1) It is a good idea to set all the existing utility classes for the element and then add class to fill all the gaps 
+
+  - EXAMPLE: <a href="#" class="super-button text-white bg-dark ff-serif uppercase">Explore</a>
+
+  - "super-button" is a main component class and with the help of utilities 
+
+  - you can easily create similar components with small differences
+
+2) Button must have :hover and :focus states
+
+3) 

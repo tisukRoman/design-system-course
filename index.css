@@ -265,7 +265,6 @@ select {
 
 .flow > * + * {
   margin-top: 1rem;
-  outline: 1px solid red;
 }
 
 /* -------------------- */
@@ -282,4 +281,31 @@ select {
   color: hsl(var(--color-white) / 0.25);
   margin-right: 0.5em;
   font-weight: 600;
+}
+
+.super-button {
+  aspect-ratio: 1;
+  padding-inline: 2rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.super-button:before {
+  content: "";
+  display: block;
+  inset: 0;
+  position: absolute;
+  border-radius: 50%;
+  background-color: hsl(var(--color-white) / 0.15);
+  opacity: 0;
+  transition: opacity 0.4s linear, transform 0.5s ease-in-out;
+}
+
+.super-button:hover:before,
+.super-button:focus:before {
+  transform: scale(1.5);
+  opacity: 1;
 }
