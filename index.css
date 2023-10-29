@@ -33,6 +33,17 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
 }
 
 /* Remove default margin */
@@ -283,6 +294,8 @@ select {
   font-weight: 600;
 }
 
+/* SUPER BUTTON */
+
 .super-button {
   aspect-ratio: 1;
   padding-inline: 2rem;
@@ -308,4 +321,53 @@ select {
 .super-button:focus:before {
   transform: scale(1.5);
   opacity: 1;
+}
+
+/* PRIMARY NAVIGATION */
+
+.primary-navigation {
+  --gap: 5rem;
+  --underline-gap: 1rem;
+  letter-spacing: 2.7px;
+}
+
+.primary-navigation a {
+  border-bottom: 3px solid transparent;
+  transition: 0.2s ease;
+}
+
+.primary-navigation a > span {
+  margin-right: 0.5em;
+  font-weight: 700;
+}
+
+/* UNDERLINE INDICATOR */
+
+.underline-indicator > * {
+  border: 0;
+  cursor: pointer;
+  padding: var(--underline-gap, 1em) 0;
+  border-bottom: 0.2rem solid hsl(var(--color-white) / 0);
+  transition: border-color 0.2s ease;
+}
+
+.underline-indicator > *:hover,
+.underline-indicator > *:focus {
+  border-color: hsl(var(--color-white) / 0.5);
+}
+
+.underline-indicator > .active {
+  border-color: hsl(var(--color-white) / 1);
+  color: hsl(var(--color-white));
+}
+
+/* PRIMARY TABS */
+
+.primary-tabs {
+  --gap: 2rem;
+}
+
+.primary-tabs > button {
+  border-color: transparent;
+  cursor: pointer;
 }

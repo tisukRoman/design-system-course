@@ -86,4 +86,8 @@ INTERACTIVE ELEMENTS
 
 2) Button must have :hover and :focus states
 
-3) 
+3) If you notice repeated styles in different components, 
+
+   move these styles to separate class and set it to these components (DRY principle for CSS)
+
+
